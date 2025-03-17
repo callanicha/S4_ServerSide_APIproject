@@ -3,7 +3,7 @@ const app = express();
 const port = 3000;
 const test = require("./test");
 const router = express.Router();
-const userRoutes = require("../routes/users");
+const userRoutes = require("./routes/users");
 
 // MIDDLEWARE
 app.use((req, res, next) => {
