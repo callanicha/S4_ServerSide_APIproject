@@ -13,7 +13,10 @@ router.get("/", (req, res) => {
 
 router.get("/", userLogIn);
 
-router.post("/", hashPassword, userSignUp);
+router.post("/signup", hashPassword, userSignUp);
+
+router.post("/longin". userLogIn);
+
 
 
 

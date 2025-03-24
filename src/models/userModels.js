@@ -16,6 +16,7 @@ const userSchema = new mongoose.Schema({
     email: {
         type: String,
         required: true,
+        unique: true,
     },
     password: {
         type: String,
@@ -33,5 +34,6 @@ const userSchema = new mongoose.Schema({
 {timestamps: true}
 )
 
+userSchema.plugin(uniqueValidator)
 
 module.exports = mongoose.model("userSchema", userSchema)
