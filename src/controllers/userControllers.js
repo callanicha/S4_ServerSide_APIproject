@@ -16,7 +16,7 @@ exports.userLogIn = async (req, res) => {
             {
              userId: foundUser._id,
             },
-            "random_secret_key",  // WE NEED TO SAVE THIS SECRET KEY AND NOT SHARE IT !
+            process.env.SECRET_TOKEN_KEY,  // WE NEED TO SAVE THIS SECRET KEY AND NOT SHARE IT !
             { expiresIn: "24h" }
            )
            res.status(200).json(token)
